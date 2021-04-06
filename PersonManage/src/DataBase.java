@@ -14,8 +14,8 @@ public class DataBase
 	{
 		try
 		{//加载MySQL的驱动类，并创建数据库连接
-			Class.forName("com.mysql.jdbc.Driver");	
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/personmanage","root","123456");	
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/personmanage?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC","root","123456");
 			stat=con.createStatement();//创建Statement对象			
 		}
 		catch(Exception e)
